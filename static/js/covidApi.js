@@ -1,3 +1,4 @@
+//fetch request
 const covidApi = {
     getSummary: async () => {
         return await fetchRequest(covidApiEndPoints.summary())
@@ -18,17 +19,21 @@ const covidApi = {
 
 const covid_api_base = 'https://api.covid19api.com/'
 
+//get url
 const covidApiEndPoints = {
     summary: () => {
         return getApiPath('summary')
     },
-    worldAllTimeCases: () => {
+    // world wip
+    worldAllTimeCases: () => {   
         return getApiPath('world')
     },
+    // day one 
     countryAllTimeCases: (country, status) => {
         let end_point = `dayone/country/${country}/status/${status}`
         return getApiPath(end_point)
     },
+    //by country 
     countryDaysCases: (country, status) => {
         let date = getDaysRange(30)
 

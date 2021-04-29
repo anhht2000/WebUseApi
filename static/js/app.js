@@ -22,7 +22,7 @@ window.onload = async () => {
 
     // only init chart on page loaded first time
 
-    initTheme()
+    // initTheme()
 
     initContryFilter()
 
@@ -326,28 +326,28 @@ loadRecoveryRate = async (rate) => {
 
 // dark mode switch
 
-initTheme = () => {
-    let dark_mode_switch = document.querySelector('#darkmode-switch')
+// initTheme = () => {
+//     let dark_mode_switch = document.querySelector('#darkmode-switch')
 
-    dark_mode_switch.onclick = () => {
-        dark_mode_switch.classList.toggle('dark')
-        body.classList.toggle('dark')
+//     dark_mode_switch.onclick = () => {
+//         dark_mode_switch.classList.toggle('dark')
+//         body.classList.toggle('dark')
 
-        setDarkChart(body.classList.contains('dark'))
-    }
-}
+//         setDarkChart(body.classList.contains('dark'))
+//     }
+// }
 
-// set dark mode for charts
-setDarkChart = (dark) => {
-    let theme = {
-        theme: {
-            mode: dark ? 'dark' : 'light'
-        }
-    }
-    all_time_chart.updateOptions(theme)
-    days_chart.updateOptions(theme)
-    recover_rate_chart.updateOptions(theme)
-}
+// // set dark mode for charts
+// setDarkChart = (dark) => {
+//     let theme = {
+//         theme: {
+//             mode: dark ? 'dark' : 'light'
+//         }
+//     }
+//     all_time_chart.updateOptions(theme)
+//     days_chart.updateOptions(theme)
+//     recover_rate_chart.updateOptions(theme)
+// }
 
 // country select
 renderCountrySelectList = (list) => {

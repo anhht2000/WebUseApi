@@ -31,7 +31,8 @@ a {
 body {
     font-family: "Cairo", sans-serif;
     position: relative;
-    background-color: var(--bg-body);
+    background-color: #c18888;
+    filter: drop-shadow(11px -6px 11px black);
     color: var(--color-txt);
     padding-top: calc(var(--nav-height) + 30px);
     font-size: 16px;
